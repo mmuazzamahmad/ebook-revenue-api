@@ -8,14 +8,14 @@ import joblib
 import json
 import os
 
-new_directory_path = "C:/Users/ahmad/OneDrive/Desktop/Deployment Project Portfolio/game-revenue-api/"  # Replace with your desired path
+new_directory_path = "C:/Users/ahmad/OneDrive/Desktop/Deployment Project Portfolio/ebook-revenue-api/"  # Replace with your desired path
 os.chdir(new_directory_path)
 
 print("--- Starting Model Training ---")
 
 # 1. Load and Prepare Data
 # Make sure the 'Dataset.xlsx' is accessible from where you run this script.
-# For simplicity, you can place it in the same 'game-revenue-api' folder.
+# For simplicity, you can place it in the same 'ebook-revenue-api' folder.
 try:
     Dataset = pd.read_excel('Dataset.xlsx', sheet_name='Sheet1')
 except FileNotFoundError:

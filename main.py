@@ -5,9 +5,9 @@ import pandas as pd
 import json
 
 # Initialize the FastAPI app
-app = FastAPI(title="Game Sales Revenue Predictor API",
-              description="An API to predict game sales revenue based on its features.",
-              version="1.0")
+app = FastAPI(title="Amazon Kindle eBook Sales Revenue Predictor API",
+              description="An API to predict Amazon Kindle eBook sales revenue based on its features.",
+              version="1.01")
 
 # --- Loading Model and Columns ---
 # Logic: Load these objects once at startup to be efficient.
@@ -24,7 +24,7 @@ except Exception as e:
 # --- Pydantic Model for Input Validation ---
 # Logic: Defines the structure and data types for the input data.
 # FastAPI will automatically validate incoming requests against this model.
-class GameFeatures(BaseModel):
+class eBookFeatures(BaseModel):
     Sales_num: float
     Sales_rank: float
     Reviews: float
@@ -40,8 +40,8 @@ class GameFeatures(BaseModel):
                 "Sales_rank": 500,
                 "Reviews": 450,
                 "Price": 59.99,
-                "Genre": "Role-Playing",
-                "Language": "en",
+                "Genre": "History",
+                "Language": "English",
                 "Country": "USA"
             }
         }
@@ -49,10 +49,10 @@ class GameFeatures(BaseModel):
 # --- API Endpoints ---
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to the Game Revenue Prediction API. Go to /docs for more info."}
+    return {"message": "Welcome to the Amazon Kindle eBook Revenue Prediction API. Go to /docs for more info."}
 
 @app.post("/predict")
-def predict_revenue(features: GameFeatures):
+def predict_revenue(features: eBookFeatures):
     """
     Predicts the sales revenue based on input features.
 
@@ -80,8 +80,6 @@ def predict_revenue(features: GameFeatures):
     # 4. Make prediction
     try:
         prediction = model.predict(input_aligned)
-        # The model predicts log-transformed revenue, so let's send it back as is
-        # Or you can transform it back if you used np.log1p: np.expm1(prediction[0])
         predicted_value = prediction[0]
     except Exception as e:
         return {"error": f"Prediction failed: {e}"}
