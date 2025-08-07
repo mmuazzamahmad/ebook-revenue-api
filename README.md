@@ -39,19 +39,3 @@ This project follows a modern MLOps architecture, separating the concerns of mod
 4.  **Deployment**: The application is deployed on **Render**. A GitHub Action is configured to automatically trigger a new build and deployment on Render whenever a push is made to the `main` branch.
 
 ---
-
-## 🏁 Getting Started Locally
-
-To run this project on your local machine, follow these steps.
-
-### Prerequisites
-
-- [Git](https://git-scm.com/)
-- [Python 3.8+](https://www.python.org/)
-- [Docker](https://www.docker.com/) (Optional, for containerized setup)
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/mmuazzamahmad/ebook-revenue-api.git
-cd ebook-revenue-api
