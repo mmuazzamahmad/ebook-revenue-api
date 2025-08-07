@@ -6,9 +6,8 @@ An end-to-end machine learning application engineered to serve real-time predict
 
 The API is live and publicly accessible. You can interact with it directly through the auto-generated FastAPI documentation.
 
-**Live API Docs: [https://ebook-revenue-api.onrender.com/docs](https://ebook-revenue-api.onrender.com/docs)**
+**Live API Docs: [https://game-revenue-api.onrender.com/docs](https://game-revenue-api.onrender.com/docs)**
 *(Note: The Render service may spin down on inactivity and take 30-60 seconds to restart on the first request.)*
-
 ---
 
 ## ✨ Features
