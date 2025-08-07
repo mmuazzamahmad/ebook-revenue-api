@@ -1,10 +1,5 @@
 # 📈 Amazon Kindle eBook Sales Revenue Predictor API
 
-[![CI/CD Pipeline](https://img.shields.io/github/actions/workflow/status/mmuazzamahmad/ebook-revenue-api/main.yml?style=for-the-badge&logo=githubactions&logoColor=white&label=CI/CD)](https://github.com/mmuazzamahmad/ebook-revenue-api/actions)
-[![Deployment](https://img.shields.io/badge/Deployment-Render-46E3B7?style=for-the-badge&logo=render)](https://ebook-revenue-api.onrender.com/docs)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Framework](https://img.shields.io/badge/Framework-FastAPI-05998b?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
-
 An end-to-end machine learning application engineered to serve real-time predictions for the sales revenue of eBooks on Amazon Kindle. This project features a powerful XGBoost model, a robust REST API built with FastAPI, and a complete CI/CD pipeline for automated cloud deployment.
 
 ## 🚀 Live API Documentation
